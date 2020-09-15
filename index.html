@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <header>
-        <div class="wrap">
+    <div id="header">
+        <header>
             <h1 class="logo">
                 <a href="/">
                     <img src="images/logo_white.png" alt="로고">
@@ -26,19 +26,19 @@
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/heart_icon_white.png" alt="장바구니">
+                        <img src="images/heart_icon_white.png" alt="관심상품">
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <img src="images/search_icon_white.png" alt="장바구니">
+                        <img src="images/search_icon_white.png" alt="검색">
                     </a>
                 </li>
             </ul>
-        </div>
-    </header>
+        </header>
+    </div>
     <!--메인비주얼-->
-    <div class="main_page">
+    <div id="main_page">
         <div class="main_bg"></div>
         <video id="myVideo" src="video/main.mp4" muted autoplay></video>
         <div class="main_text">
@@ -49,13 +49,43 @@
                 celebrities and artists so that we reinterpret eyewear from a modern viewpoint.</p>
         </div>
     </div>
+    <!--컨텐츠 영역-->
+    <div id="main_cont" class="wrap">
+        <h2 class="cont_tit">sunglasses</h2>
+        <p class="cont_sub_tit">Experience the lightweight and stylish combination glasses<br>
+            from the new collection.</p>
+        <section class="cont1">
+            <div class="cont_img">
+                <img src="images/original.jpg" alt="original" class="contimg">
+                <img src="images/category01.png" alt="category01" class="contimghover">
+            </div>
+            <div class="cont_txt">
+                <h3>original</h3>
+                <p>Based on trendy, Influential, innovative and contemporary
+                    styles, <br>reinterpreting the 1970's American classics and
+                    vintagedesigns from a modern viewpoint.</p>
+            </div>
+        </section>
+        <section class="cont2">
+            <div class="cont_txt">
+                <h3>signature</h3>
+                <p>Made of titanium, mazzucchelli with more exquisite details,<br>
+Based on styles from the BLUE ELEPHANT archives<br>
+celebrating timeless design born in decades past.</p>
+            </div>
+            <div class="cont_img">
+                <img src="images/signature.jpg" alt="original" class="contimg">
+                <img src="images/category02.png" alt="category01" class="contimghover">
+            </div>
+        </section>
+    </div>
 
 
+    <!--푸터-->
+    <footer></footer>
 
 
-
-    <!--그리드뷰-->
-    <ul class="grid">
+    <ul class="gdrid">
         <li></li>
         <li></li>
         <li></li>
@@ -69,7 +99,6 @@
         <li></li>
         <li></li>
     </ul>
-
 </body>
 
 </html>

@@ -9,7 +9,6 @@ ul,ol{
     list-style: none;
 }
 
-
 ul::after, ol::after{
     content: "";
     display: block;
@@ -18,7 +17,6 @@ ul::after, ol::after{
 li{
     float: left;
 }
-
 
 a{
     text-decoration: none;
