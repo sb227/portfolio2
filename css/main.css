@@ -49,9 +49,12 @@ video {
 }
 
 /************* 선글라스 컨텐츠영역1700 *************/
+.title_wrap {
+    text-align: center;
+}
+
 #sun_cont_wrap {
     padding: 10% 0;
-    text-align: center;
 }
 
 /* 제목 */
@@ -61,9 +64,13 @@ video {
 }
 
 #sun_cont_wrap section {
-    border: 1px solid red;
     padding-top: 7%;
     display: flex;
+}
+
+.sun_cont2 {
+    margin-top: -10%;
+    justify-content: flex-end;
 }
 
 /* cont_img */
@@ -71,6 +78,7 @@ video {
     position: relative;
     width: 650px;
     height: 650px;
+    overflow: hidden;
 }
 
 .cont_img img {
@@ -79,7 +87,7 @@ video {
     top: 0;
     width: 100%;
     height: 100%;
-    transition: all .3s;
+    transition: all .5s;
 }
 
 .contimghover {
@@ -87,6 +95,7 @@ video {
 }
 
 .cont_img:hover .contimghover {
+    transform: scale(1.05);
     opacity: 1;
 }
 
@@ -124,7 +133,6 @@ video {
     position: relative;
     height: 800px;
     background: url(../images/bg1.jpg) no-repeat 0/cover;
-    font-size: 70px;
 }
 
 MARQUEE {
@@ -133,17 +141,17 @@ MARQUEE {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #000;
+    font-size: 150px;
     font-weight: 900;
     color: #fff;
-    text-shadow: 2px 0 #000,0 2px #000,2px 0 #000,0 2px #000;
-    height: 70px;
-    line-height: 70px;
-    
+    height: 150px;
+    line-height: 150px;
+    font-family: 'Roboto', sans-serif
 }
 
-.ban_btn{
+.ban_btn {
     position: absolute;
-    top: 60%;
+    top: 65%;
     left: 50%;
     transform: translateX(-50%);
     display: block;
@@ -159,26 +167,94 @@ MARQUEE {
     transition: all .3s;
 }
 
-.ban_btn:hover{
+.ban_btn:hover {
     color: #333;
     background: #fff;
 }
 
 /********************** 안경 콘텐츠*****************/
-#gls_cont_wrap{
+#gls_cont_wrap {
     padding: 10% 0;
-    text-align: center;
 }
-.gls_cont1{
+
+.gls_cont1 {
+    position: relative;
+    padding: 5% 0;
+}
+
+/* 호버이미지 바뀌는 곳*/
+.gls_on {
+    width: 500px;
+}
+
+.gls_on img {
+    width: 100%;
+}
+
+.gls_list_wrap{
+    position: absolute;
+    right: -900px;
+    bottom: 0px;
+}
+.gls_list {    
+    width: 2400px;
+}
+
+.gls_list li {
+    width: 16.66%;
+    height: 400px;
     position: relative;
 }
 
-
-.gls_list li{
-    width: 300px;
-}
-
-.gls_list img{
+.gls_list img {
     width: 100%;
     height: 100%;
 }
+
+#scrollBar {
+    position: relative;
+    /*position()위치구하기 위해 relative설정함!*/
+    width: 1500px;
+    height: 5px;
+    background: #ccc;
+}
+
+#bar {
+    width: 400px;
+    height: 5px;
+    background: #333;
+}
+
+/************* 오프라인 매장 *************/
+.shop_btn{
+    display: block;
+    margin: 3% auto;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .3s;
+    border: 1px solid #000;
+}
+
+.shop_btn:hover {
+    color: #333;
+    background: #fff;
+    border: 1px solid #000;
+}
+    
+
+
+
+
+.shop_img{
+    width: 100%;
+    height: 500px;
+    background: url(../images/shop.jpg) no-repeat 0/100%;
+}
+
+

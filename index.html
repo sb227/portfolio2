@@ -51,11 +51,10 @@
     </div>
     <!--선글라스 컨텐츠-->
     <div id="sun_cont_wrap" class="wrap">
-        <!-- 타이틀 -->
-        <h2 class="cont_tit">sunglasses</h2>
-        <p class="cont_sub_tit">Experience the lightweight and stylish combination glasses<br>
-            from the new collection.</p>
-        <!-- 타이틀 -->
+        <div class="title_wrap">
+            <h2 class="cont_tit">sunglasses</h2>
+            <p class="cont_sub_tit">Experience the lightweight and stylish combination glasses<br>from the new collection.</p>
+        </div>
         <section class="sun_cont1">
             <div class="cont_img">
                 <img src="images/original.jpg" alt="original" class="contimg">
@@ -83,7 +82,7 @@
     </div>
     <!--중간 이벤트 배너-->
     <div id=ban>
-        <MARQUEE loop="infinite">
+        <MARQUEE loop="infinite" scrollamount="10">
             2020 F/W ORIGINAL COLLECTION
         </MARQUEE>
         <a class="ban_btn">
@@ -92,50 +91,67 @@
     </div>
     <!--안경 콘텐츠-->
     <div id="gls_cont_wrap">
-        <!-- 타이틀 -->
-        <h2 class="cont_tit">glasses</h2>
-        <p class="cont_sub_tit">Discover your next frame that defines you.</p>
-        <!-- 타이틀 -->
+        <div class="title_wrap">
+            <h2 class="cont_tit">glasses</h2>
+            <p class="cont_sub_tit">Discover your next frame that defines you.</p>
+        </div>
         <section class="gls_cont1">
             <div class="gls_on">
                 <img src="images/06.jpg" alt="착용사진">
                 <h4></h4>
                 <p></p>
             </div>
-            <ul class="gls_list">
-                <li>
-                    <a>
-                        <img src="images/g01.jpg" alt="제품1">
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <img src="images/g02.jpg" alt="제품2">
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <img src="images/g03.jpg" alt="제품3">
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <img src="images/g04.jpg" alt="제품4">
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <img src="images/g05.jpg" alt="제품5">
-                    </a>
-                </li>
-                <li>
-                    <a>
-                        <img src="images/g06.jpg" alt="제품6">
-                    </a>
-                </li>
-            </ul>
+            <div class="gls_list_wrap">
+                <ul class="gls_list">
+                    <li>
+                        <a>
+                            <img src="images/g01.jpg" alt="제품1">
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/g02.jpg" alt="제품2">
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/g03.jpg" alt="제품3">
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/g04.jpg" alt="제품4">
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/g05.jpg" alt="제품5">
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/g06.jpg" alt="제품6">
+                        </a>
+                    </li>
+                </ul>
+                <div id="scrollBar">
+                    <div id="bar"></div>
+                </div>
+            </div>
         </section>
     </div>
+    <!-- 오프라인 매장 -->
+    <div id="shop_wrap">
+        <div class="title_wrap">
+            <h2 class="cont_tit">shop</h2>
+            <p class="cont_sub_tit">Itaewon Flagship Store
+                21, ITAEWON-ro 16-gil, Yongsan-gu,
+                Seoul, Republic of Korea</p>
+        </div>
+        <a href="#" class="shop_btn">SEARCH</a>
+        <div class="shop_img"></div>
+    </div>
+
     <!--푸터-->
     <footer></footer>
 
