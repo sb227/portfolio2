@@ -40,5 +40,54 @@ header h1{
     height: 25px;
 }
 
+/****************************푸터********************/
+#footer{
+    background: #222;
+    height: 200px;
+    color: #bbb;
+    line-height: 1.7;
+    font-size: 11px;
+}
+
+#footer .wrap{
+    display: flex;
+    height: 100%;    
+    align-items: center;
+}
+
+.footer_left{
+    width: 70%;
+}
+
+.footer_left p{
+    margin-top: 10px;
+}
+
+.footer_right p{
+    margin: 10px 0;
+}
+
+#footer p{
+    color: #eee;
+    font-size: 12px;
+}
+#footer span{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

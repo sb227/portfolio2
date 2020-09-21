@@ -94,12 +94,13 @@ video {
     opacity: 0;
 }
 
-.cont_img:hover .contimghover {
-    transform: scale(1.05);
+.sun_cont1:hover .contimghover,
+.sun_cont2:hover .contimghover{
     opacity: 1;
 }
 
-.cont_img:hover .contimg {
+.sun_cont1:hover .contimg,
+.sun_cont2:hover .contimg {
     opacity: .7;
 }
 
@@ -120,13 +121,17 @@ video {
     line-height: 1.2;
 }
 
-
 /* sun_cont2 cont_txt */
 .sun_cont2 .cont_txt {
     padding-left: 0;
     padding-right: 11%;
     text-align: right;
 }
+
+.cont_txt h3:hover a{
+    color: #2e63ac;
+}
+
 
 /****************************이벤트배너************/
 #ban {
@@ -177,53 +182,44 @@ MARQUEE {
     padding: 10% 0;
 }
 
-.gls_cont1 {
+.gls_cont {
     position: relative;
     padding: 5% 0;
 }
 
-/* 호버이미지 바뀌는 곳*/
-.gls_on {
-    width: 500px;
-}
-
-.gls_on img {
-    width: 100%;
-}
-
-.gls_list_wrap{
-    position: absolute;
-    right: -900px;
-    bottom: 0px;
-}
 .gls_list {    
-    width: 2400px;
+    width: 100%;
 }
 
 .gls_list li {
-    width: 16.66%;
-    height: 400px;
-    position: relative;
+    width: 23.5%;
+    height: 100%;
+    margin-right: 2%;
 }
 
+.gls_list li:nth-child(1){
+    background: url(../images/01.jpg) no-repeat 0/cover;
+}
+.gls_list li:nth-child(2){
+    background: url(../images/02.jpg) no-repeat 0/cover;
+}
+.gls_list li:nth-child(3){
+    background: url(../images/03.jpg) no-repeat 0/cover;
+}
+.gls_list li:nth-child(4){
+    margin-right: 0;
+    background: url(../images/04.jpg) no-repeat 0/cover;
+}
 .gls_list img {
     width: 100%;
     height: 100%;
+    transition: all 0.1s;
 }
 
-#scrollBar {
-    position: relative;
-    /*position()위치구하기 위해 relative설정함!*/
-    width: 1500px;
-    height: 5px;
-    background: #ccc;
+.gls_list img:hover{
+    opacity: 0;
 }
 
-#bar {
-    width: 400px;
-    height: 5px;
-    background: #333;
-}
 
 /************* 오프라인 매장 *************/
 .shop_btn{
@@ -247,10 +243,6 @@ MARQUEE {
     border: 1px solid #000;
 }
     
-
-
-
-
 .shop_img{
     width: 100%;
     height: 500px;
