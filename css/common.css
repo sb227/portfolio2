@@ -2,11 +2,8 @@
 
 /* common.css - 공통레이아웃 디자인 */
 
-/****************************헤더********************/
-#header{
-    position: relative;
-}
-header{
+/****************************헤더*************************/
+#header {
     position: fixed;
     top: 0;
     left: 0;
@@ -16,32 +13,37 @@ header{
     z-index: 100;
 }
 
+#header .wrap {
+    position: relative;
+    height: 100%;
+}
+
 /*로고*/
-header h1{
+header h1 {
     padding-top: 35px;
-    padding-left: 70px;
 }
 
 /*gnb*/
-.gnb{
+.gnb {
     position: absolute;
-    width: 150px;
-    right: 70px;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
+    width: 180px;
 }
 
-.gnb li{
-    width: 33.33%;
+.gnb li {
+    width: 25%;
     text-align: center;
 }
-.gnb img{
+
+.gnb img {
     width: 25px;
     height: 25px;
 }
 
-/****************************푸터********************/
-#footer{
+/****************************푸터************************/
+#footer {
     background: #222;
     height: 200px;
     color: #bbb;
@@ -49,45 +51,66 @@ header h1{
     font-size: 11px;
 }
 
-#footer .wrap{
+#footer .wrap {
     display: flex;
-    height: 100%;    
+    height: 100%;
     align-items: center;
 }
 
-.footer_left{
+.footer_left {
     width: 70%;
 }
 
-.footer_left p{
+.footer_left p {
     margin-top: 10px;
 }
 
-.footer_right p{
+.footer_right p {
     margin: 10px 0;
 }
 
-#footer p{
+#footer p {
     color: #eee;
     font-size: 12px;
 }
-#footer span{
+
+#footer span {
     display: block;
 }
 
+/************************** 햄버거메뉴 ***********************/
+#menu_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg2.jpg) no-repeat center/cover;
+    display: none;
+}
 
+#menu_wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
 
+.nav_list{
+    position: absolute;
+}
 
+.nav_list li {
+    width: 100%;
+    text-align: right;
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.nav_list a {
+    color: #fff;
+    font-size: 10vmin;
+    line-height: 1.5;
+}
