@@ -7,6 +7,7 @@
 @import url(common.css);
 
 
+/* ***********************메인 페이지 영상 **********************/
 /* 메인비주얼 100% */
 #main_page {
     position: relative;
@@ -48,13 +49,24 @@ video {
     line-height: 1.5;
 }
 
-/************* 선글라스 컨텐츠영역1700 *************/
+/************* 선글라스 컨텐츠영역 **************************/
 .title_wrap {
     text-align: center;
 }
 
 #sun_cont_wrap {
     padding: 10% 0;
+}
+
+#sun_cont_wrap .title_wrap{
+    position: relative;
+    left: 10%;
+    opacity: 0;
+    transition: all 1.5s ease-out;
+}
+#sun_cont_wrap .title_wrap.on{
+    left: 0%;
+    opacity: 1;
 }
 
 /* 제목 */
@@ -86,7 +98,7 @@ video {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+/*    height: 100%;*/
     transition: all .5s;
 }
 
@@ -94,15 +106,21 @@ video {
     opacity: 0;
 }
 
-.sun_cont1:hover .contimghover,
-.sun_cont2:hover .contimghover{
+.sun_cont1.on .contimghover,
+.sun_cont2.on .contimghover{
     opacity: 1;
 }
 
-.sun_cont1:hover .contimg,
-.sun_cont2:hover .contimg {
+.sun_cont1.on .contimg,
+.sun_cont2.on .contimg {
     opacity: .7;
 }
+
+.sun_cont1.on a,
+.sun_cont2.on a{
+    color: #2e63ac;
+}
+
 
 /* cont_txt */
 .cont_txt {
@@ -128,12 +146,9 @@ video {
     text-align: right;
 }
 
-.cont_txt h3:hover a{
-    color: #2e63ac;
-}
 
 
-/****************************이벤트배너************/
+/****************************이벤트배너*********************/
 #ban {
     position: relative;
     height: 800px;
@@ -151,7 +166,7 @@ MARQUEE {
     color: #fff;
     height: 150px;
     line-height: 150px;
-    font-family: 'Roboto', sans-serif
+    font-family: 'Roboto', sans-serif;
 }
 
 .ban_btn {
@@ -177,7 +192,7 @@ MARQUEE {
     background: #fff;
 }
 
-/********************** 안경 콘텐츠*****************/
+/********************** 안경 콘텐츠************************/
 #gls_cont_wrap {
     padding: 10% 0;
 }
@@ -213,15 +228,43 @@ MARQUEE {
 .gls_list img {
     width: 100%;
     height: 100%;
-    transition: all 0.1s;
+    transition: all 0.3s;
 }
 
 .gls_list img:hover{
     opacity: 0;
 }
 
+.gls_list a{
+    color: #fff;
+}
 
-/************* 오프라인 매장 *************/
+.gls_list h5{
+    font-size: 15px;
+    padding-left: 3%;
+}
+
+.gls_list h6{
+    font-size: 12px;
+    font-weight: 400;
+    padding: 1% 0 1% 3%;
+}
+
+.more_btn{
+    text-align: right;
+    font-size: 22px;
+    padding: 2% 0;
+}
+.more_btn span{
+    transition: all .4s;
+}
+
+.more_btn a:hover span{
+    display: inline-block;
+    transform: rotate(360deg);
+}
+
+/************************ 오프라인 매장 ********************/
 .shop_btn{
     display: block;
     margin: 3% auto;
@@ -247,6 +290,32 @@ MARQUEE {
     width: 100%;
     height: 500px;
     background: url(../images/shop.jpg) no-repeat 0/100%;
+}
+
+
+#flowTxt{
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200%;
+    text-align: center;
+    font: bold 5vw Verdana;
+    color: #fff;
+    white-space: nowrap;
+    animation: flowTxt 20s linear infinite;
+}
+
+#flowTxt span{
+    display: block;
+    flex: 1;
+}
+
+@keyframes flowTxt{
+    to{
+        left: -100%;
+    }
 }
 
 

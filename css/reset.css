@@ -16,6 +16,7 @@ ul::after, ol::after{
     display: block;
     clear: both;
 }
+
 li{
     float: left;
 }
