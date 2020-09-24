@@ -9,7 +9,7 @@
     left: 0;
     height: 100px;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background-image: linear-gradient(to bottom, rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0));
     z-index: 100;
 }
 
@@ -79,15 +79,20 @@ header h1 {
     display: block;
 }
 
-/************************** 햄버거메뉴 ***********************/
+/*********************** 햄버거메뉴 셋팅 ***********************/
+#menu_wrap.on{
+    display: block;
+}
+
 #menu_wrap {
+    display: none;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0%;
     width: 100%;
     height: 100%;
-    background: url(../images/bg2.jpg) no-repeat center/cover;
-    display: none;
+    background: url(../images/menu1.jpg) no-repeat center/cover;
+    transition: all .3s ease-out;
 }
 
 #menu_wrap::before {
@@ -102,6 +107,9 @@ header h1 {
 
 .nav_list{
     position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
 }
 
 .nav_list li {
@@ -111,7 +119,30 @@ header h1 {
 }
 
 .nav_list a {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.6);
     font-size: 10vmin;
     line-height: 1.5;
+    transition: all .3s ease-out;
 }
+
+.nav_list a:hover{
+    color: #fff;
+}
+
+/********************* 햄버거메뉴 셋팅 *******************/
+.menu_btn img{
+    transition: all .5s ease-out;
+}
+
+.menu_btn:hover img{
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+
