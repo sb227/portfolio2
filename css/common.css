@@ -38,9 +38,28 @@ header h1 {
     text-align: center;
 }
 
+.gnb img:hover{
+    animation: ring 0.5s infinite linear;
+}
+
 .gnb img {
+    transition: all .2s ease-out;
     width: 25px;
     height: 25px;
+}
+
+@keyframes ring{
+  0%, 100% {
+    transform: rotate(0);
+  }
+  
+  35% {
+    transform: rotate(10deg);
+  }
+
+  75% {
+    transform: rotate(-20deg);
+  }
 }
 
 /****************************푸터************************/
@@ -80,7 +99,7 @@ header h1 {
 }
 
 /*********************** 햄버거메뉴 셋팅 ***********************/
-#menu_wrap.on{
+#menu_wrap.on {
     display: block;
 }
 
@@ -105,7 +124,7 @@ header h1 {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.nav_list{
+.nav_list {
     position: absolute;
     top: 50%;
     right: 10%;
@@ -125,24 +144,8 @@ header h1 {
     transition: all .3s ease-out;
 }
 
-.nav_list a:hover{
+.nav_list a:hover {
     color: #fff;
 }
 
-/********************* 햄버거메뉴 셋팅 *******************/
-.menu_btn img{
-    transition: all .5s ease-out;
-}
-
-.menu_btn:hover img{
-    transform: rotate(180deg);
-}
-
-
-
-
-
-
-
-
-
+/********************* 햄버거메뉴 *******************/
