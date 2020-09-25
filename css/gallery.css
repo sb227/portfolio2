@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* gallery .css - 갤러리 페이지 css */
+
+/* 파일 merging(합치기) */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+
+.gallery{
+    background: #eee;
+}
+
+/******************* 중앙 텍스트 *******************/
+#text{
+    font-weight: 500;
+    font-size: 30vmin;
+    text-align: center;
+    line-height: 100%;
+}

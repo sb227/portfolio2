@@ -21,10 +21,6 @@ body {
     color: #333;
 }
 
-body{
-    overflow-x: hidden;
-}
-
 /* 공통 클래스 */
 /* IR(image replacement) */
 .ir {

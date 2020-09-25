@@ -2,7 +2,7 @@
 
 $(function () { /////// jQB ///////////////////////
     console.log("로딩완료!");
-    
+
     $("#wrap").smoothWheel()
 
     // 아이템 위치 변수
@@ -18,9 +18,9 @@ $(function () { /////// jQB ///////////////////////
 
 
     // 위치갭(이전,이후)
-    var gap = 200;
+    var gap = 150;
     ////// scroll 셋팅 ///////////
-    $(window).scroll(function () {
+    $("#wrap").scroll(function () {
         var scTop = $(this).scrollTop();
         console.log("스위:" + scTop);
 
@@ -99,14 +99,42 @@ $(function () { /////// jQB ///////////////////////
     move.draggable({
             axis: "x" // 축고정("x"는 x축고정, "y"는 y축고정)
         })
-        // 트랜지션 설정
         .css({
             transition: "all .4s ease-out"
         });
 
+    // 화면 한계값 계산:
+    // 화면의 1/5크기는?
+    // 첫번째 한계값
+    var fpt = $(window).width() / 5;
+    console.log("첫째한계:" + fpt);
+    // 마지막째 한계값
+    var lpt = move.width() - (fpt * 4);
+    // 마지막 한계값은 전체 크기에서 화면 4/5크기를 빼면된다!
+    console.log("마지막한계:" + lpt);
 
+    // 화면한계시에 위치고정 코드
+    $("html,body").on("mousedown mouseup mousemove touchstart touchend touchmove", function () {
+        //console.log("마우스냐 터치냐");
 
+        // 1. 움직이는 박스(.gls_list)의 left값 구하기
+        var mpos = move.offset().left;
+        console.log("현재left:" + mpos);
 
+        // 2. 처음 한계값 체크 후 위치고정하기!
+        if (mpos > fpt) {
+            move.css({ //한계값 고정!
+                left: fpt + "px"
+            }); /// css ////
+        } /// if ////////////////
+        // 3. 마지막 한계값 체크 후 위치고정하기!
+        // left위치값은 마이너스임! -lpt
+        else if (mpos < -lpt) {
+            move.css({ //한계값 고정!
+                left: -lpt + "px"
+            }); /// css ////
+        } /// else if /////////////////
+    }); /////// 마우스, 터치 이벤트 //////////
 
 
 }); ////////// jQB ///////////////////////////////
