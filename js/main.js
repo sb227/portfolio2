@@ -88,11 +88,6 @@ $(function () { /////// jQB ///////////////////////
         })
     }); ////// mouseover //////////
 
-    // 햄버거 메뉴 on 넣기
-    $(".menu_btn").click(function () {
-        $("#menu_wrap").toggleClass("on");
-    }); ////////// click /////////////
-
 
     var move = $(".gls_list");
 
