@@ -19,22 +19,22 @@
     transform: translate(-50%,-50%);
     font-weight: 200;
     font-size: 30vmin;
+    color: #333;
     z-index: 1;
 }
 
 #photo{
     position: relative;
-    width: 250%;
+    width: 300%;
     height: 100%;
 }
 
-#photo li{
+#photo li{ 
     position: absolute;
-    width: 20vmax;
 }
 
 #photo img{
-    width: 100%;
+    width: 40vmin;
 }
 
 

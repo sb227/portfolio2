@@ -20,8 +20,16 @@
 
 /*로고*/
 header h1 {
+    position: relative;
     padding-top: 35px;
-    padding-left: 20px;
+}
+
+.logo img{
+    position: absolute;
+}
+
+.logo img:last-child{
+    display: none;
 }
 
 /*gnb*/
@@ -36,6 +44,10 @@ header h1 {
 .gnb li {
     width: 25%;
     text-align: center;
+}
+
+.gnb li img:last-child{
+    display: none;
 }
 
 .gnb img:hover{
@@ -61,6 +73,30 @@ header h1 {
     transform: rotate(-20deg);
   }
 }
+
+/****************************헤더 on *************************/
+#header.on {
+    background-image: none;
+}
+
+#header.on .logo img:first-child{
+    display: none;
+}
+
+#header.on .gnb li img:first-child{
+    display: none;
+}
+
+#header.on .logo img:last-child{
+    display: block;
+}
+
+#header.on .gnb li img:last-child{
+    display: block;
+}
+
+
+
 
 /****************************푸터************************/
 #footer {
@@ -108,6 +144,7 @@ header h1 {
 }
 
 #menu_wrap {
+    z-index: 99;
     position: fixed;
     right: -100%;
     top: 0%;
@@ -151,4 +188,3 @@ header h1 {
     color: #fff;
 }
 
-/********************* 햄버거메뉴 *******************/

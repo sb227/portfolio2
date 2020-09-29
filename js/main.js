@@ -3,7 +3,7 @@
 $(function () { /////// jQB ///////////////////////
     console.log("로딩완료!");
 
-    $("#wrap").smoothWheel()
+    $("#wrap").smoothWheel();
 
     // 아이템 위치 변수
     var itpos = [];
@@ -23,6 +23,15 @@ $(function () { /////// jQB ///////////////////////
     $("#wrap").scroll(function () {
         var scTop = $(this).scrollTop();
         console.log("스위:" + scTop);
+
+        // 로고 기준선 액션 ///
+        if (scTop > itpos[0] - gap * 2) {
+            // class넣기
+            $("#header").addClass("on");
+        } ///////// if ////////////////////
+        else {
+            $("#header").removeClass("on");
+        } ///////// else ////////////////////
 
         // 1번째 기준선 액션 ///
         if (scTop > itpos[0] - gap * 2 &&
@@ -78,17 +87,6 @@ $(function () { /////// jQB ///////////////////////
 
     /// 셋팅된 위치에서 등장액션 class주기
 
-    // 메뉴 li 오버시 배경 바뀌게
-    $(".nav_list li").mouseover(function () {
-        var i = $(this).index();
-        // console.log(i);
-
-        $("#menu_wrap").css({
-            backgroundImage: "url(images/menu" + (i + 1) + ".jpg)"
-        })
-    }); ////// mouseover //////////
-
-
     var move = $(".gls_list");
 
     move.draggable({
@@ -131,6 +129,13 @@ $(function () { /////// jQB ///////////////////////
         } /// else if /////////////////
     }); /////// 마우스, 터치 이벤트 //////////
 
+
+    // 안경 리스트 배경이미지 넣기 
+    for (var i = 1; i < 9; i++) {
+        $(".gls_list li:nth-child(" + i + ")").css({
+            background: "url(images/0" + i + ".jpg) no-repeat 0/cover"
+        }); /////// css ////////////
+    } ///////// for //////////////
 
 }); ////////// jQB ///////////////////////////////
 /////////////////////////////////////////////////

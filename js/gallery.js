@@ -44,12 +44,12 @@ function (e) {
 
 
 // 이미지 뿌리기
-for (var i = 1; i < 20; i++) {
-    $("#photo").append("<li><img src='images/gallery/" + i + ".jpg'></li>");
-
+for (var i = 1; i < 15; i++) {
+    $("#photo").append("<li class='galimg"+i+"'><img src='images/gallery/" + i + ".jpg'></li>");
+//
 //    $("#photo li:nth-child(" + i + ")").css({
-//        top: rnum + "%",
-//        left: rnum + "%"
+//        top: (Math.random()*40) + "%",
+//        left: (Math.random()*90) + "%"
 //    }); //// css ///////////
 
 
