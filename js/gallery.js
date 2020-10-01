@@ -44,7 +44,7 @@ function (e) {
 
 
 // 이미지 뿌리기
-for (var i = 1; i < 15; i++) {
+for (var i = 1; i < 13; i++) {
     $("#photo").append("<li class='galimg"+i+"'><img src='images/gallery/" + i + ".jpg'></li>");
 //
 //    $("#photo li:nth-child(" + i + ")").css({
