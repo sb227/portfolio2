@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* show .css - 상세페이지 페이지 css */
+
+/* 파일 merging(합치기) */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+/****************************************************************/
+
+
+/*************** 상단 경로 *******************/
+.gls_location{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.4vmin;
+    font-weight: 500;
+}
+
+.gls_location li{
+    padding: 1.7vmin;
+}
+
+.gls_location li:hover a{
+    color: #6f8b9a;
+}
+
+/************************** 컨텐츠 영역 *********************************/
+#show_cont_wrap{
+    margin: 20vh auto;
+}
+
+.show_cont{
+    display: flex;
+}
+
+.show_cont section{
+    width: 50%;
+}
+
+
+/*********************** 왼쪽 *****************************/
+.show_list li{
+    width: 100%;
+    margin-bottom: 8vmin;
+}
+
+.show_list img{
+    width: 90%;
+    display: block;
+}
+
+/************************ 오른쪽 ***********************/
+#show_right{
+    position: fixed;
+    right: 0;
+    padding: 15vmin 20vmin 15vmin 10vmin;
+/*    border: 1px solid blue;*/
+}
+
+#show_right h3{
+    position: relative;
+    font-size: 4vmin;
+}
+
+#show_right p{
+    font-size: 2.5vmin;
+    margin: 3vmin 0;
+}
+
+.heart{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.heart img{
+/*    position: absolute;*/
+    width: 20px;
+}
+
+button{
+    width: 100%;
+    height: 6vmin;
+    border: 0;
+    background: rgba(111, 139, 154, 0.4);
+    color: #fff;
+    transition: all .2s ease-out;
+}
+
+button:hover{
+    background: rgba(111, 139, 154, 0.6);
+}
+
+.show_info{
+    margin-top: 3vmin;
+}
+
+.show_info li{
+    width: 100%;
+    height: 6vmin;
+    line-height: 6vmin;
+    border-bottom: 1px solid rgba(111, 139, 154, 0.2);
+}
+
+.show_info a{
+    display: block;
+    transition: all .2s ease-out;
+}
+
+.show_info a:hover{
+    color: #7aadc6;
+}
+
+.show_info a::before{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.show_info span{
+    float: right;
+    margin-right: 3vmin;
+    font-size: 3vmin;
+    transition: all .2s ease-out;
+}
+
+.show_info a:hover span{
+    transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

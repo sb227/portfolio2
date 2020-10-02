@@ -40,7 +40,7 @@ video {
 }
 
 .main_text > h2 {
-    font-size: 5.7rem;
+    font-size: 10vmin;
 }
 
 .main_text > p {
@@ -71,7 +71,7 @@ video {
 
 /* 제목 */
 .cont_tit {
-    font-size: 5rem;
+    font-size: 10vmin;
     margin-bottom: 3%;
 }
 
@@ -134,12 +134,12 @@ video {
 }
 
 .cont_txt h3 {
-    font-size: 6rem;
+    font-size: 11vmin;
     padding-bottom: 10%;
 }
 
 .cont_txt p {
-    font-size: 1.3rem;
+    font-size: 3vmin;
     line-height: 1.2;
 }
 
