@@ -129,11 +129,19 @@ button:hover{
     transform: rotate(45deg);
 }
 
+.show_info div{
+    font-size: 1vmin;
+    line-height: 1.7;
+    margin-bottom: 1vmin;
+}
 
+.show_info li.on>a{
+    color: #7aadc6;
+}
 
-
-
-
+.show_info li.on span{
+    transform: rotate(45deg);
+}
 
 
 

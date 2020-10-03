@@ -7,11 +7,15 @@ $(function(){ ////////////////// JQB ////////////
     
     $(".show_info div").hide();
     $(".show_info li").click(function(){
-        $(".show_info div").slideToggle();
+        $(this).find("div").slideToggle();
         $(this).css({
             height:"100%"
         }); /////// css ////////
+        $(this).toggleClass("on");
     }); //////////// click /////////////////////
+    
+    
+    
     
 }); ////////////////////////////////////////////
 ///////////////////JQB  ////////////////////////
