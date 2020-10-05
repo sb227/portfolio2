@@ -35,12 +35,31 @@
     color: #fff;
 }
 .gls_list h5{
+    font-size: 1.7vmin;
     bottom: 3.5vmin;
 }
 
 .gls_list h6{
+    font-size: 1.3vmin;
+    font-weight: 400;
     bottom: 1vmin;
 }
+
+.gls_list img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.gls_list img:hover{
+    opacity: 0;
+}
+
+.gls_list a{
+    display: block;
+}
+
 
 .gls_list li:nth-child(3n){   
     margin-right: 0;
@@ -81,31 +100,6 @@
 }
 .gls_list li:nth-child(12){
     background: url(../images/08.jpg) no-repeat 0/cover;
-}
-.gls_list img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s;
-}
-
-.gls_list img:hover{
-    opacity: 0;
-}
-
-.gls_list a{
-    display: block;
-}
-
-.gls_list h5{
-    font-size: 1.7vmin;
-    padding-left: 3%;
-}
-
-.gls_list h6{
-    font-size: 1.3vmin;
-    font-weight: 400;
-    padding: 1% 0 1% 3%;
 }
 
 

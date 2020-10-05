@@ -40,6 +40,10 @@
 
 
 /*********************** 왼쪽 *****************************/
+#show_left{
+    border: 1px solid lime;
+}
+
 .show_list li{
     width: 100%;
     margin-bottom: 8vmin;
@@ -53,6 +57,7 @@
 /************************ 오른쪽 ***********************/
 #show_right{
     position: fixed;
+    border: 1px solid red;
     right: 0;
     padding: 15vmin 20vmin 15vmin 10vmin;
 /*    border: 1px solid blue;*/
@@ -71,12 +76,24 @@
 .heart{
     position: absolute;
     top: 0;
-    right: 0;
+    right: 25px;
 }
 
 .heart img{
-/*    position: absolute;*/
+    position: absolute;
     width: 20px;
+}
+
+.heart img:last-child{
+    opacity: 0;
+    transition: all .4s;
+}
+
+.heart.on img:last-child{
+    opacity: 1;
+}
+.heart.on img:first-child{
+    opacity: 0;
 }
 
 button{
@@ -143,10 +160,74 @@ button:hover{
     transform: rotate(45deg);
 }
 
+/************************ 관련제품 리스트 ************/
+#show_prd_list h2{
+    text-align: center;
+    font-weight: 400;
+    font-size: 3vmin;
+    padding: 2vmin 0 5vmin 0;
+}
 
+.prd_list {
+    width: 100%;
+}
 
+.prd_list li {
+    position: relative;
+    width: 23.5%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    height: 100%;
+}
 
+.prd_list h5, .prd_list h6{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #333;
+    transition: all 0.3s;
+}
 
+.htxt:hover h5, .htxt:hover h6{
+    color: #fff;
+}
 
+.prd_list h5{
+    font-size: 1.7vmin;
+    bottom: 3.5vmin;
+}
 
+.prd_list h6{
+    font-size: 1.3vmin;
+    font-weight: 400;
+    bottom: 1vmin;
+}
 
+.prd_list img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.prd_list img:hover{
+    opacity: 0;
+}
+
+.prd_list a{
+    display: block;
+}
+
+.prd_list li:nth-child(1){
+    background: url(../images/01.jpg) no-repeat 0/cover;
+}
+.prd_list li:nth-child(2){
+    background: url(../images/09.jpg) no-repeat 0/cover;
+}
+.prd_list li:nth-child(3){
+    background: url(../images/02.jpg) no-repeat 0/cover;
+}
+.prd_list li:nth-child(4){
+    margin-right: 0;
+    background: url(../images/10.jpg) no-repeat 0/cover;
+}
