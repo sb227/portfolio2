@@ -23,11 +23,11 @@ header h1 {
     padding-top: 35px;
 }
 
-.logo img{
+.logo img {
     position: absolute;
 }
 
-.logo img:last-child{
+.logo img:last-child {
     display: none;
 }
 
@@ -45,11 +45,11 @@ header h1 {
     text-align: center;
 }
 
-.gnb li img:last-child{
+.gnb li img:last-child {
     display: none;
 }
 
-.gnb img:hover{
+.gnb img:hover {
     animation: ring 0.5s infinite linear;
 }
 
@@ -60,18 +60,20 @@ header h1 {
     margin: 0 auto;
 }
 
-@keyframes ring{
-  0%, 100% {
-    transform: rotate(0);
-  }
-  
-  35% {
-    transform: rotate(10deg);
-  }
+@keyframes ring {
 
-  75% {
-    transform: rotate(-20deg);
-  }
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    35% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-20deg);
+    }
 }
 
 /****************************헤더 on *************************/
@@ -79,19 +81,19 @@ header h1 {
     background-image: none;
 }
 
-#header.on .logo img:first-child{
+#header.on .logo img:first-child {
     display: none;
 }
 
-#header.on .gnb li img:first-child{
+#header.on .gnb li img:first-child {
     display: none;
 }
 
-#header.on .logo img:last-child{
+#header.on .logo img:last-child {
     display: block;
 }
 
-#header.on .gnb li img:last-child{
+#header.on .gnb li img:last-child {
     display: block;
 }
 
@@ -113,6 +115,7 @@ header h1 {
 
 .footer_left {
     width: 70%;
+    padding-right: 7%;
 }
 
 .footer_left p {
@@ -123,8 +126,8 @@ header h1 {
     margin: 10px 0;
 }
 
-.footer_right p:first-child{
-    margin-top:0;
+.footer_right p:first-child {
+    margin-top: 0;
 }
 
 #footer p {
@@ -132,7 +135,7 @@ header h1 {
     font-size: 12px;
 }
 
-#footer span {
+.footer_1920{
     display: block;
 }
 
@@ -186,3 +189,57 @@ header h1 {
     color: #fff;
 }
 
+/******************* 미디어 쿼리 **********/
+@media only screen and (max-width:500px) {
+    #header {
+        height: 75px;
+    }
+
+    /*로고*/
+    header h1 {
+        padding-top: 35px;
+    }
+
+    .logo img {
+        width: 50%;
+    }
+
+    /*gnb*/
+    .gnb {
+        width: 20px;
+    }
+
+    .gnb img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .gnb li:nth-child(1),
+    .gnb li:nth-child(2),
+    .gnb li:nth-child(3) {
+        display: none;
+    }
+
+    .gnb li:last-child {
+        display: block;
+    }
+
+    #footer .wrap {
+        display: block;
+    }
+
+    .footer_left {
+        padding-top: 10vmin;
+        width: auto;
+    }
+    
+    .footer_right{
+        display: none;
+    }
+    
+    .footer_500{
+        display: block;
+    }
+}
+
+/* 미디어쿼리 500 이하*/

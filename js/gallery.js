@@ -1,5 +1,10 @@
 // 갤러리 스크립트 
 
+/// 0. 모바일용 코드
+var mob = 0; //0-모바일 아님, 1-모바일
+if ($(window).width() <= 500) {
+    mob = 1;
+}
 
 // 1. 스크롤위치
 var scno = 0;
@@ -14,10 +19,23 @@ var psts = 0; //(0-허용,1-불허용)
 $(function () { ////////////////// JQB ////////////
     console.log("로딩완료");
 
-    totsize = $("#photo").width() - $(window).width();
+    // 모바일만 푸터 보이게
+    $("#footer").hide();
+    if(mob===1){
+        $("#footer").show();
+    }
+    
+    // 이미지 뿌리기
+    for (var i = 1; i < 13; i++) {
+        $("#photo").append("<li class='galimg" + i + "'><a href='images/gallery/" + i + ".jpg' data-lightbox='view'><img src='images/gallery/" + i + ".jpg'></a></li>");
+    } ////// for문 ////////
 
+
+    totsize = $("#photo").width() - $(window).width();
     $(document).on("mousewheel DOMMouseScroll",
         function (e) {
+            // 모바일일때 작동막기
+            if (mob) return true;
             // console.log("휠");
 
             e = window.event || e;
@@ -43,11 +61,7 @@ $(function () { ////////////////// JQB ////////////
         }); ///////////////// 마우스 휠 ////////////
 
 
-    // 이미지 뿌리기
-    for (var i = 1; i < 13; i++) {
-        $("#photo").append("<li class='galimg" + i + "'><a href='images/gallery/" + i + ".jpg' data-lightbox='view'><img src='images/gallery/" + i + ".jpg'></a></li>");
-    } ////// for문 ////////
-
+    
 
 }); ////////////////// JQB //////////////////////
 /////////////////////////////////////////////////
