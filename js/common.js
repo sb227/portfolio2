@@ -14,7 +14,7 @@ $(function(){ ////////////////// JQB ////////////
         // console.log(i);
 
         $("#menu_wrap").css({
-            backgroundImage: "url(images/menu" + (i + 1) + ".jpg)"
+            background: "url(images/menu"+(i+1)+".jpg) no-repeat center/cover"
         })
     }); ////// mouseover //////////
 

@@ -161,6 +161,10 @@ button:hover{
 }
 
 /************************ 관련제품 리스트 ************/
+#show_prd_list{
+    padding-top: 10vmin;
+}
+
 #show_prd_list h2{
     text-align: center;
     font-weight: 400;

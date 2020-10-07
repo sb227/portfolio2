@@ -8,7 +8,7 @@
 
 /********************** 안경 콘텐츠************************/
 #gls_list_wrap {
-    margin: 20vh auto;
+    margin: 20vmin auto;
 }
 
 .gls_list {
@@ -136,6 +136,35 @@
     color: #6f8b9a;
 }
 
+/************ 페이지 넘버링***********/
+.gls_num{
+    position: relative;
+    height: 50px;
+}
+
+.gls_num_list{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.gls_num_list li{
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #6f8b9a;
+    border-right: 0;
+}
+
+.gls_num_list li:last-child{
+    border-right: 1px solid #6f8b9a;
+}
+
+.gls_num_list li.on{
+    font-weight: 600;
+}
 
 /*************** 미디어쿼리****************/
 @media only screen and (max-width:500px) {

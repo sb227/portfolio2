@@ -28,7 +28,7 @@ $(function () { ////////////////// JQB ////////////
     var gap = 200;
 
     ////// scroll 셋팅 ///////////
-    $("#wrap").scroll(function () {
+    $(window).scroll(function () {
         var scTop = $(this).scrollTop();
         console.log("스위:" + scTop);
 
@@ -39,7 +39,7 @@ $(function () { ////////////////// JQB ////////////
         // 로고 기준선 액션 ///
         if (scTop > lpos - gap * 2) {
             console.log("하이하이");
-            // top 값이 움직이게
+                        
         } /////// if ///////////
 
     });
