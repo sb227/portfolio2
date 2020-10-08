@@ -1,8 +1,9 @@
 // 제품 리스트 
 
+
 $(function(){ ////////////////// JQB ////////////
     console.log("로딩완료");
-    
+    menuSts = 1;// (0-불허용,1-허용)
     $("#wrap").smoothWheel()
     
     

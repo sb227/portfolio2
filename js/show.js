@@ -1,6 +1,8 @@
+// 상세페이지 
+
 $(function () { ////////////////// JQB ////////////
     console.log("로딩완료");
-    
+    menuSts = 1;// (0-불허용,1-허용)
     // $("#wrap").smoothWheel();
     
     // 왼쪽 이미지 넣기
@@ -38,11 +40,16 @@ $(function () { ////////////////// JQB ////////////
         
         // 로고 기준선 액션 ///
         if (scTop > lpos - gap * 2) {
-            console.log("하이하이");
+            console.log("하이하이"+$("#show_right").offset().top);
             $("#show_right").css({
-                top:scTop
+                position:"absolute",
+                top:$("#show_right").offset().top+"px"
             }); //////// css ////////////
         } /////// if ///////////
+        else{
+            $("#show_right").attr("style",""); //////// css ////////////
+        }
+        
     }); /////////// 스크롤 ////////////
 
 
