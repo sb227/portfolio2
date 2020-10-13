@@ -73,7 +73,12 @@ video {
 /* 제목 */
 .cont_tit {
     font-size: 10vmin;
-    margin-bottom: 3%;
+    margin-bottom: 4%;
+}
+
+.cont_sub_tit {
+    font-size: 2vmin;
+    line-height: 1.4;
 }
 
 #sun_cont_wrap section {
@@ -88,8 +93,8 @@ video {
 
 /* cont_img */
 .cont_img {
+    width: 40%;
     position: relative;
-    width: 650px;
     height: 650px;
     overflow: hidden;
 }
@@ -99,7 +104,6 @@ video {
     left: 0;
     top: 0;
     width: 100%;
-    /*    height: 100%;*/
     transition: all .5s;
 }
 
@@ -129,6 +133,7 @@ video {
 
 /* cont_txt */
 .cont_txt {
+    width: 60%;
     padding-left: 11%;
     padding-top: 15%;
     text-align: left;
@@ -140,7 +145,7 @@ video {
 }
 
 .cont_txt p {
-    font-size: 3vmin;
+    font-size: 2vmin;
     line-height: 1.2;
 }
 
@@ -207,7 +212,6 @@ MARQUEE {
 
 .swiper-slide {
     display: flex;
-    justify-content: center;
     align-items: center;
     height: auto;
 }
@@ -244,12 +248,18 @@ MARQUEE {
 .gls_list h5 {
     font-size: 2vmin;
     padding-left: 3%;
+    line-height: 1.4;
+/*
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+*/
 }
 
 .gls_list h6 {
     font-size: 1.5vmin;
     font-weight: 400;
-    padding: 1% 0 1% 3%;
+    padding: 0 0 2% 3%;
 }
 
 
@@ -323,3 +333,60 @@ MARQUEE {
         left: -100%;
     }
 }
+
+/********************** 미디어쿼리 ********************/
+@media only screen and (max-width:1024px) {
+    #main_page {
+        height: 80%;
+    }
+
+    .main_text {
+        left: 10%;
+    }
+
+    .main_text > h2 {
+        font-size: 8vmin;
+    }
+    .cont_img {
+        height: 400px;
+    }
+    .cont_tit {
+        font-size: 8vmin;
+        margin-bottom: 7%;
+    }
+    
+    .cont_sub_tit{
+        font-size: 1.5vmin;
+    }
+    
+    .cont_txt h3{
+        font-size: 6vmin;
+    }
+    
+    .cont_txt p{
+        font-size: 1.5vmin;
+    }
+    
+    #ban{
+        height: 500px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

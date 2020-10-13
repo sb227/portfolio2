@@ -261,6 +261,11 @@ button:hover {
         display: block;
     }
 
+
+    .show_cont section {
+        width: 100%;
+    }
+
     .show_list img {
         width: 100%;
     }
@@ -271,7 +276,6 @@ button:hover {
 
     #show_right {
         position: static;
-        width: 100%;
         padding: 10vmin 0;
     }
 
@@ -293,26 +297,26 @@ button:hover {
     #show_prd_list {
         padding-top: 0;
     }
-    
+
     .prd_list li:nth-child(3),
-    .prd_list li:nth-child(4){
+    .prd_list li:nth-child(4) {
         display: none;
     }
-    
-    .prd_list li{
+
+    .prd_list li {
         width: 49%;
         margin-right: 2%;
     }
-    
-    .prd_list li:nth-child(2){
+
+    .prd_list li:nth-child(2) {
         margin-right: 0;
     }
-    
-    .prd_list h5{
+
+    .prd_list h5 {
         font-size: 3vmin;
     }
-    
-    .prd_list h6{
+
+    .prd_list h6 {
         display: none;
     }
 }

@@ -1,13 +1,28 @@
 /// 메인 페이지 JS - main.js ////
 
-// 메뉴변경허용 상태값
-var menuSts = 0;// (0-불허용,1-허용)
 var winH = $(window).height();
-
+var winW = $(window).width();
+// 메뉴변경허용 상태값
+var menuSts = 0; // (0-불허용,1-허용)
+// 슬라이드 갯수 
+var snum = 5;
 $(function () { /////// jQB ///////////////////////
-    console.log("로딩완료!");
+    console.log("로딩완료!"+winW);
 
     $("#wrap").smoothWheel();
+
+    // 미디어쿼리 변수 설정
+    if (winW > 1024) {
+        snum = 5;
+        console.log(snum);
+    } else if (winW > 500 && winW <= 1024) {
+        snum = 4;
+        console.log(snum);
+    } else if (winW <= 500){
+        snum =3;
+        console.log(snum);
+    }
+
 
     // 아이템 위치 변수
     var itpos = [];
@@ -27,23 +42,21 @@ $(function () { /////// jQB ///////////////////////
     $("#wrap").scroll(function () {
         var scTop = $(this).scrollTop();
         console.log("스위:" + scTop);
-        
-        
 
         // 로고 기준선 액션 ///
-        if (scTop > itpos[0]-200) {
+        if (scTop > itpos[0] - 200) {
             // class넣기
             $("#header").addClass("on");
-            menuSts = 1;//허용
+            menuSts = 1; //허용
         } ///////// if ////////////////////
-        else {// 첫번째 영역
+        else { // 첫번째 영역
             $("#header").removeClass("on");
-            menuSts = 0;//불허용
+            menuSts = 0; //불허용
         } ///////// else ////////////////////
-        
-        
-        console.log("메뉴허용:"+menuSts);
-        
+
+
+        console.log("메뉴허용:" + menuSts);
+
 
         // 1번째 기준선 액션 ///
         if (scTop > itpos[0] - gap * 2 &&
@@ -96,12 +109,16 @@ $(function () { /////// jQB ///////////////////////
             $("#shop_wrap .title_wrap").removeClass("on");
         } ///////// else ////////////////////
     }); ///////// scroll //////////////
-
     /// 셋팅된 위치에서 등장액션 class주기
-
+    
+    // 스와이퍼 설정
     var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 5,
-      spaceBetween: 30        
+      slidesPerView: snum,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      }
     });
 
     // 안경 리스트 배경이미지 넣기 

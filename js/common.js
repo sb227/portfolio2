@@ -7,7 +7,11 @@ $(function () { ////////////////// JQB ////////////
         if (menuSts)
             $("#header").toggleClass("on");
     }); ////////// click /////////////
-
+    
+    /// event 메뉴 클릭시
+    $(".nav_list li").last().click(function(){
+        alert("해당 페이지는 준비중입니다.");
+    }); /////// click /////////
 
     // 메뉴 li 오버시 배경 바뀌게
     $(".nav_list li").mouseover(function () {
