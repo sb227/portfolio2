@@ -88,7 +88,7 @@ video {
 
 .sun_cont2 {
     margin-top: -10%;
-    justify-content: flex-end;
+    flex-flow: row-reverse;
 }
 
 /* cont_img */
@@ -155,20 +155,11 @@ video {
 }
 
 
-/* sun_cont2 cont_txt */
-.sun_cont2 .cont_txt {
-    padding-left: 0;
-    padding-right: 11%;
-    text-align: right;
-}
-
-
-
 /****************************이벤트배너*********************/
 #ban {
     position: relative;
     height: 800px;
-    background: url(../images/bg1.jpg) no-repeat 0/cover;
+    background: url(../images/bg1.jpg) no-repeat center/cover;
 }
 
 MARQUEE {
@@ -198,7 +189,7 @@ MARQUEE {
     text-align: center;
     background: #000;
     color: #fff;
-    font-size: 20px;
+    font-size: 2vmin;
     cursor: pointer;
     transition: all .3s;
 }
@@ -246,14 +237,20 @@ MARQUEE {
 }
 
 .gls_list h5 {
+    position: relative;
     font-size: 2vmin;
     padding-left: 3%;
     line-height: 1.4;
-/*
+    height: 40px;
+}
+
+.gls_list h5 span {
+    position: absolute;
+    display: block;
+    width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
-*/
 }
 
 .gls_list h6 {
@@ -323,7 +320,7 @@ MARQUEE {
     animation: flowTxt 20s linear infinite;
 }
 
-#flowTxt span {
+flow {
     display: block;
     flex: 1;
 }
@@ -347,46 +344,151 @@ MARQUEE {
     .main_text > h2 {
         font-size: 8vmin;
     }
+
     .cont_img {
         height: 400px;
     }
+
     .cont_tit {
         font-size: 8vmin;
         margin-bottom: 7%;
     }
-    
-    .cont_sub_tit{
+
+    .cont_sub_tit {
         font-size: 1.5vmin;
     }
-    
-    .cont_txt h3{
+
+    .cont_txt h3 {
         font-size: 6vmin;
     }
-    
-    .cont_txt p{
+
+    .cont_txt p {
         font-size: 1.5vmin;
     }
-    
-    #ban{
+
+    #ban {
         height: 500px;
+    }
+
+    .gls_list h5 {
+        height: 25px;
     }
 }
 
+/* 미디어쿼리 1024 */
 
+@media only screen and (max-width:500px) {
+    .main_text {
+        top: 80%;
+        right: 5%;
+    }
 
+    .main_text p {
+        display: none;
+    }
 
+    .cont_sub_tit {
+        font-size: 3vmin;
+    }
 
+    #sun_cont_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 30%;
+    }
 
+    #sun_cont_wrap section {
+        margin-top: 5%;
+        padding: 2%;
+        width: 50%;
+        display: block;
+    }
 
+    .sun_cont2 {
+        margin-top: 0;
+    }
 
+    .cont_img {
+        position: relative;
+    }
 
+    .cont_img img {
+        position: relative;
+    }
 
+    .contimghover {
+        display: none;
+    }
 
+    .cont_txt {
+        margin-top: 5%;
+        width: 100%;
+        padding-left: 0;
+        padding-top: 0;
+        text-align: center;
+    }
 
+    .cont_txt p {
+        display: none;
+    }
 
+    #ban {
+        height: 300px;
+    }
 
+    .ban_btn {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        color: #fff;
+        font-size: 3vmin;
+        top: 0%;
+        left: 0;
+        transform: none;
+        text-align: right;
+        line-height: 550px;
+        padding-right: 5%;
+    }
 
+    #flowTxt {
+        text-align: left;
+        animation: none;
+        font-size: 9vw;
+        left: 25px;
+    }
 
+    .flow:last-child {
+        display: none;
+    }
 
+    .shop_img {
+        height: 200px;
+        margin-top: 5%;
+    }
 
+    .shop_btn {
+        display: none;
+    }
 
+    .br {
+        display: block;
+    }
+
+    .gls_list {
+        padding-bottom: 5%;
+    }
+
+    .gls_list img {
+        opacity: 0;
+    }
+
+    .gls_list h5 {
+        height: 10px;
+    }
+
+    .gls_list h6 {
+        font-size: 1vmin;
+    }
+}
+
+/* 미디어쿼리 500 */

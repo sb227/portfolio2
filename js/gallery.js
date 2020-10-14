@@ -16,23 +16,55 @@ var psts = 0; //(0-허용,1-불허용)
 
 /////////////////////////////////////////////
 
+if (!mob) {
+    $(window).resize(function () {
+        totsize = $(".galimg12").offset().left + 1000;
+        console.log(totsize);
+
+        $("#photo").css({
+            width: totsize + "px"
+        }); /////// css ///////////
+
+        scno = 0;
+
+    }); /////////resize ///////////
+} ///// if //////////
+
+
 
 $(function () { ////////////////// JQB ////////////
     console.log("로딩완료");
-    menuSts = 1;// (0-불허용,1-허용)
+    menuSts = 1; // (0-불허용,1-허용)
+
     // 모바일만 푸터 보이게
     $("#footer").hide();
-    if(mob===1){
+    if (mob === 1) {
         $("#footer").show();
     }
-    
+
     // 이미지 뿌리기
     for (var i = 1; i < 13; i++) {
         $("#photo").append("<li class='galimg" + i + "'><a href='images/gallery/" + i + ".jpg' data-lightbox='view'><img src='images/gallery/" + i + ".jpg'></a></li>");
     } ////// for문 ////////
 
 
-    totsize = $("#photo").width() - $(window).width();
+    
+    
+    // 모바일 아닐 때 전체 사이즈
+    if (!mob) {
+        totsize = $(".galimg12").offset().left + 1000;
+        $("#photo").css({
+            width: totsize + "px"
+        }); /////// css ///////////
+    } /////////// if ///////// 
+    
+    // 모바일일때 전체 사이즈
+    else{ 
+        totsize = $("#photo").width() - $(window).width();
+    }
+
+
+
     $(document).on("mousewheel DOMMouseScroll",
         function (e) {
             // 모바일일때 작동막기
@@ -62,7 +94,7 @@ $(function () { ////////////////// JQB ////////////
         }); ///////////////// 마우스 휠 ////////////
 
 
-    
+
 
 }); ////////////////// JQB //////////////////////
 /////////////////////////////////////////////////

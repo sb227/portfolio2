@@ -6,11 +6,11 @@ $(function () { ////////////////// JQB ////////////
     console.log("로딩완료");
 
     // 모바일?
-    if ($(window).width() < 500) mob = 1
+    if ($(window).width() <= 500) mob = 1
     console.log("현재 상태" + mob);
 
     menuSts = 1; // (0-불허용,1-허용)
-    // $("#wrap").smoothWheel();
+     //$("#wrap").smoothWheel();
 
     // 왼쪽 이미지 넣기
 
@@ -50,12 +50,7 @@ $(function () { ////////////////// JQB ////////////
         $(".show_list").addClass("swiper-wrapper");
         for (var i = 1; i < 6; i++) {
             $(".show_list").append("<li class='swiper-slide'><img src='images/show/hendrix_mandarincrystal_dt_0" + i + ".jpg'></li>")
-        } ////////// for /////////////////        
-        $(".show_list li").css({
-            float: "none",
-            display: "flex"
-        }); //////// css//////////////
-
+        } ////////// for /////////////////  
         var swiper = new Swiper('.swiper-container', {
             pagination: {
                 el: '.swiper-pagination',
@@ -63,8 +58,6 @@ $(function () { ////////////////// JQB ////////////
         });
 
     } /////// else //////////////////
-
-
 
     // 상세 정보 클릭시
     $(".show_info div").hide();
@@ -81,7 +74,10 @@ $(function () { ////////////////// JQB ////////////
         $(this).toggleClass("on");
     }); ///// click //////////   
 
-
+    // a태그 튕김
+    $(".show_info").click(function(e){
+        e.preventDefault();
+    }); ///////// click ////////
 
 
 }); ////////////////////////////////////////////
