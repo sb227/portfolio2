@@ -60,12 +60,12 @@ $(function () { ////////////////// JQB ////////////
     } /////// else //////////////////
 
     // 상세 정보 클릭시
-    $(".show_info div").hide();
+    $(".show_info div").slideUp();
     $(".show_info li").click(function () {
         $(this).find("div").slideToggle();
-        $(this).css({
-            height: "100%"
-        }); /////// css ////////
+//        $(this).css({
+//            height: "100%"
+//        }); /////// css ////////
         $(this).toggleClass("on");
     }); //////////// click /////////////////////
 
