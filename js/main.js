@@ -26,7 +26,7 @@ $(function () { /////// jQB ///////////////////////
         snum = 4;
         console.log(snum);
     } else if (winW <= 500) {
-        snum = 3;
+        snum = 2;
         console.log(snum);
     }
 

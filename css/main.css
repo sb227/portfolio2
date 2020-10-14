@@ -449,6 +449,10 @@ flow {
         line-height: 550px;
         padding-right: 5%;
     }
+    
+    .ban_btn:hover{
+        background: transparent;
+    }
 
     #flowTxt {
         text-align: left;
@@ -483,11 +487,11 @@ flow {
     }
 
     .gls_list h5 {
-        height: 10px;
+        font-size: 3vmin;
     }
 
     .gls_list h6 {
-        font-size: 1vmin;
+        display: none;
     }
 }
 
