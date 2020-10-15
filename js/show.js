@@ -60,12 +60,12 @@ $(function () { ////////////////// JQB ////////////
     } /////// else //////////////////
 
     // 상세 정보 클릭시
-    $(".show_info div").slideUp();
+    $(".show_info div").hide();
     $(".show_info li").click(function () {
         $(this).find("div").slideToggle();
-//        $(this).css({
-//            height: "100%"
-//        }); /////// css ////////
+        $(this).css({
+            height: "auto"
+        }); /////// css ////////
         $(this).toggleClass("on");
     }); //////////// click /////////////////////
 
@@ -75,10 +75,9 @@ $(function () { ////////////////// JQB ////////////
     }); ///// click //////////   
 
     // a태그 튕김
-    $(".show_info").click(function(e){
+    $("#show_right a").click(function(e){
         e.preventDefault();
     }); ///////// click ////////
-
 
 }); ////////////////////////////////////////////
 ///////////////////JQB  ////////////////////////

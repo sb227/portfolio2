@@ -167,6 +167,9 @@
     font-weight: 600;
 }
 
+.gls_num_list a{
+    display: block;
+}
 /*************** 미디어쿼리****************/
 @media only screen and (max-width:500px) {
 
