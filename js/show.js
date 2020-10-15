@@ -33,7 +33,7 @@ $(function () { ////////////////// JQB ////////////
 
             // 로고 기준선 액션 ///
             if (scTop > lpos - gap * 2) {
-                console.log("하이하이" + $("#show_right").offset().top);
+                //console.log("하이하이" + $("#show_right").offset().top);
                 $("#show_right").css({
                     position: "absolute",
                     top: $("#show_right").offset().top + "px"
