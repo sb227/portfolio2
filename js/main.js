@@ -147,6 +147,11 @@ $(function () { /////// jQB ///////////////////////
         $(".ban_btn").text("CLICK HERE !")
     } //////// if //////////////
     
+    // ban_btn 클릭시 갤러리로 이동
+    $(".ban_btn").click(function(e){
+        e.preventDefault();
+        location.href="gallery.html";
+    }); ///// click ////////////
 
 }); ////////// jQB ///////////////////////////////
 /////////////////////////////////////////////////
